@@ -1,151 +1,149 @@
 # 🎬 Netflix Movie Content Analysis (2019–2021)
 
 ## 📌 Project Overview
-Netflix is one of the largest digital streaming and entertainment platforms in the world. Movies are one of the primary types of content offered on the platform.
+Netflix merupakan salah satu platform streaming dan hiburan digital terbesar di dunia. Film menjadi salah satu jenis konten utama yang tersedia di platform ini.
 
-This project analyzes Netflix movie content from **2019 to 2021** to understand trends in movie additions, identify dominant genres and countries, and provide **data-driven recommendations** to support future content growth.
+Proyek ini bertujuan untuk menganalisis konten film Netflix pada periode **2019 hingga 2021** guna memahami tren penambahan film, mengidentifikasi genre dan negara yang dominan, serta memberikan **rekomendasi berbasis data** untuk mendukung pertumbuhan konten di masa mendatang.
 
-The dataset used in this analysis contains **3,276 movie records**.
+Dataset yang digunakan dalam analisis ini terdiri dari **3.276 data film**.
 
 ---
 
 # ❓ Business Problem
 
-During the observed period, the number of movies added to Netflix experienced a decline:
+Pada periode yang diamati, jumlah film yang ditambahkan ke Netflix mengalami penurunan:
 
 - **2019 → 2020:** -8.81%  
 - **2020 → 2021:** -36.67%
 
-This decline raises the following business question:
+Penurunan ini menimbulkan pertanyaan bisnis berikut:
 
-**How can Netflix increase movie content growth from -36.67% to -27.86% in the following year?**
+**Bagaimana Netflix dapat meningkatkan pertumbuhan konten film dari -36.67% menjadi -27.86% pada tahun berikutnya?**
 
 ---
 
 # 🎯 Project Objectives
 
-- Analyze the **trend of movie content growth on Netflix**
-- Identify **countries contributing the most movie content**
-- Analyze **dominant movie genres**
-- Identify **directors contributing the most movies**
-- Provide **data-driven recommendations** to increase movie content growth
+- Menganalisis **tren pertumbuhan konten film di Netflix**
+- Mengidentifikasi **negara yang paling banyak berkontribusi terhadap konten film**
+- Menganalisis **genre film yang paling dominan**
+- Mengidentifikasi **sutradara yang paling banyak memproduksi film**
+- Memberikan **rekomendasi berbasis data** untuk meningkatkan pertumbuhan konten film
 
 ---
 
 # 📂 Dataset Description
 
-The dataset contains information about movies available on Netflix with the following attributes:
+Dataset berisi informasi mengenai film yang tersedia di Netflix dengan atribut sebagai berikut:
 
-| Column | Description |
+| Kolom | Deskripsi |
 |------|------|
-| show_id | Unique identifier for each movie |
-| type | Content type (Movie or TV Show) |
-| title | Movie title |
-| director | Name of the movie director |
-| cast | List of actors |
-| country | Country of production |
-| date_added | Date when the movie was added to Netflix |
-| years_added | Year when the movie was added |
-| release_year | Year when the movie was released |
-| rating | Age rating classification |
-| duration | Duration of the movie |
-| listed_in | Genre categories |
-| description | Short description of the movie |
+| show_id | Identitas unik setiap film |
+| type | Jenis konten (Film atau TV Show) |
+| title | Judul film |
+| director | Nama sutradara film |
+| cast | Daftar aktor yang bermain dalam film |
+| country | Negara produksi |
+| date_added | Tanggal film ditambahkan ke Netflix |
+| years_added | Tahun film ditambahkan |
+| release_year | Tahun rilis film |
+| rating | Klasifikasi usia penonton |
+| duration | Durasi film |
+| listed_in | Kategori genre film |
+| description | Deskripsi singkat film |
 
 ---
 
 # 🧹 Data Cleaning
 
-Before conducting the analysis, several data cleaning steps were performed to prepare the dataset:
+Sebelum melakukan analisis, dilakukan beberapa tahapan pembersihan data agar dataset siap digunakan:
 
-- Removing duplicate records based on the **show_id** column
-- Handling missing values in the **country** and **director** columns
-- Formatting data variables such as converting **date_added** into date format and extracting **years_added**
-- Splitting multi-value columns such as **country** and **listed_in** for more detailed analysis
+- Menghapus data duplikat berdasarkan kolom **show_id**
+- Menangani nilai yang hilang pada kolom **country** dan **director**
+- Memformat variabel data seperti mengubah **date_added** menjadi format tanggal dan mengekstrak **years_added**
+- Memisahkan kolom dengan beberapa nilai seperti **country** dan **listed_in** untuk analisis yang lebih detail
 
 ---
 
 # 🔍 Data Analysis Workflow
 
-This project follows a standard data analysis workflow:
+Proyek ini mengikuti tahapan analisis data sebagai berikut:
 
 1. **Business Understanding**  
-Understanding the decline in movie content growth.
+Memahami permasalahan terkait penurunan pertumbuhan konten film.
 
 2. **Data Understanding**  
-Exploring the dataset and identifying key variables.
+Memahami struktur dataset dan variabel yang tersedia.
 
 3. **Data Preparation**  
-Cleaning and transforming the dataset.
+Melakukan pembersihan dan transformasi data.
 
 4. **Exploratory Data Analysis (EDA)**  
-Identifying patterns in movie growth, countries, genres, and directors.
+Menganalisis pola pertumbuhan film, negara, genre, dan sutradara.
 
 5. **Visualization & Insight Extraction**  
-Creating visualizations to identify meaningful insights.
+Membuat visualisasi untuk mendapatkan insight dari data.
 
 ---
 
 # 📊 Key Analysis Metrics
 
-### Movie Content Growth per Year
-Analyzes how many movies are added to Netflix each year.
+- ### Pertumbuhan Konten Film per Tahun
+  Menganalisis jumlah film yang ditambahkan ke Netflix setiap tahun.
 
-### Movie Content Growth by Country
-Identifies which countries contribute the most movies to Netflix.
+- ### Pertumbuhan Konten Film Berdasarkan Negara
+  Mengidentifikasi negara yang paling banyak menyumbang film ke Netflix.
 
-### Genre Distribution
-Analyzes the most common movie genres on Netflix.
+- ### Distribusi Genre Film
+  Menganalisis genre film yang paling banyak tersedia di Netflix.
 
-### Director Contribution
-Identifies directors who have contributed the most movies.
+- ### Kontribusi Sutradara
+  Mengidentifikasi sutradara yang paling banyak memproduksi film di Netflix.
 
 ---
 
 # 💡 Key Insights
 
-### Country Contribution
-The **United States** contributes the highest number of movies with **1,676 movies**, followed by **India**. Other countries contribute significantly fewer movies.
+- ### Kontribusi Negara
+  **Amerika Serikat** merupakan negara dengan kontribusi film terbanyak yaitu **1.676 film**, diikuti oleh **India**. Negara lain memberikan kontribusi yang jauh lebih sedikit.
 
-### Genre Distribution
-The most dominant genres on Netflix include:
+- ### Distribusi Genre
+  Genre film yang paling dominan di Netflix adalah:
+  - Drama
+  - Film Internasional
+  - Komedi
 
-- Dramas
-- International Movies
-- Comedies
+- ### Genre Dominan di Amerika Serikat
+  Genre yang paling banyak diproduksi di Amerika Serikat antara lain:
+  - Drama
+  - Komedi
+  - Action & Adventure
+  - Children & Family Movies
+  - Independent Movies
 
-### Dominant Genres in the United States
-The most common genres produced in the United States include:
-
-- Dramas
-- Comedies
-- Action & Adventure
-- Children & Family Movies
-- Independent Movies
-
-### Director Contribution
-The director with the highest number of movies is **Cathy Garcia-Molina** with **13 movies**, while **Robert Rodriguez** ranks fifth with **8 movies**.
+- ### Kontribusi Sutradara
+  Sutradara dengan jumlah film terbanyak adalah **Cathy Garcia-Molina** dengan **13 film**, sementara **Robert Rodriguez** berada di peringkat kelima dengan **8 film**.
 
 ---
 
 # 🧾 Conclusion
 
-The analysis shows that the decline in Netflix movie additions is influenced by **content concentration in a limited number of countries and genres**. Most movies originate from the **United States and India**, while other countries contribute relatively little.
+Hasil analisis menunjukkan bahwa penurunan penambahan film di Netflix dipengaruhi oleh **konsentrasi produksi konten yang hanya berasal dari beberapa negara dan genre tertentu**. Sebagian besar film berasal dari **Amerika Serikat dan India**, sementara negara lain memiliki kontribusi yang relatif kecil.
 
-This indicates opportunities to expand content production across more countries and diversify genre offerings.
+Hal ini menunjukkan adanya peluang bagi Netflix untuk memperluas produksi konten ke lebih banyak negara serta meningkatkan keberagaman genre film.
 
 ---
 
 # 🚀 Recommendations
 
-### Expand Movie Production Across More Countries
-Encourage movie production in countries with lower contributions to increase global content diversity.
+- ### Memperluas Produksi Film ke Lebih Banyak Negara
+  Mendorong produksi film dari negara yang kontribusinya masih rendah untuk meningkatkan keberagaman konten global.
 
-### Diversify Genre Offerings
-Expanding the variety of movie genres can help attract broader audiences.
+- ### Diversifikasi Genre Film
+  Menambah variasi genre film dapat membantu menarik lebih banyak segmen penonton.
 
-### Collaborate with Experienced Directors
-Working with experienced directors may help produce high-quality movies and strengthen Netflix's competitiveness.
+- ### Kolaborasi dengan Sutradara Berpengalaman
+  Bekerja sama dengan sutradara berpengalaman dapat membantu menghasilkan film berkualitas tinggi dan meningkatkan daya saing Netflix.
 
 ---
 
@@ -158,14 +156,3 @@ The analysis was conducted using:
 - Matplotlib
 - Seaborn
 - Jupyter Notebook / Google Colab
-
----
-
-# 🔮 Future Improvements
-
-Possible improvements for this project include:
-
-- Movie rating analysis
-- Movie duration analysis
-- Release year trend analysis
-- Predictive modeling for movie popularity
